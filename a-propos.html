@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — FastCard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7; --surface:#FFFFFF; --ink:#16213A; --ink-soft:#5B6478;
+    --blue:#2F6FED; --border:#E7E6E1; --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{ background:var(--bg); color:var(--ink); font-family:'Inter', sans-serif; line-height:1.7; }
+  h1,h2{ font-family:'Sora', sans-serif; }
+  a{ color:var(--blue); }
+  .wrap{ max-width:640px; margin:0 auto; padding:60px 24px 80px; }
+  .back{ display:inline-block; margin-bottom:28px; font-size:14px; color:var(--ink-soft); text-decoration:none; }
+  .back:hover{ color:var(--ink); }
+  h1{ font-size:28px; margin-bottom:6px; }
+  .updated{ color:var(--ink-soft); font-size:13px; margin-bottom:34px; }
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-bottom:20px; }
+  .card h2{ font-size:17px; margin-bottom:10px; }
+  .card p{ color:var(--ink-soft); font-size:14.5px; }
+  .card p + p{ margin-top:10px; }
+  footer{ margin-top:40px; font-size:13px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← Retour au site</a>
+  <h1>À propos de ce site</h1>
+  <div class="updated">Dernière mise à jour : juillet 2026</div>
+
+  <div class="card">
+    <h2>FastCard est un site de démonstration</h2>
+    <p>Ce site est un prototype front-end à but illustratif. Il présente le fonctionnement d'un service de vente de cartes cadeaux payables en cryptomonnaie, mais <strong>aucun paiement crypto réel n'est traité</strong> par ce prototype.</p>
+    <p>Les adresses de paiement, QR codes et cours affichés servent à illustrer le parcours client — ils ne sont pas reliés à un système de vérification ou de livraison automatisée de cartes cadeaux.</p>
+  </div>
+
+  <div class="card">
+    <h2>Ce qu'il faudrait pour un vrai lancement</h2>
+    <p>Une mise en production nécessiterait notamment :</p>
+    <p>— Un vrai processeur de paiement crypto (ex. BTCPay Server, Coinbase Commerce) pour vérifier les paiements sur la blockchain.</p>
+    <p>— Un fournisseur de cartes cadeaux en gros pour délivrer de vrais codes valides.</p>
+    <p>— Un enregistrement PSAN/VASP auprès de l'AMF, obligatoire en France pour manipuler des crypto-actifs à titre commercial.</p>
+  </div>
+
+  <footer>
+    Une question ? Écrivez à <a href="mailto:fastcardmessage@gmail.com">fastcardmessage@gmail.com</a>.
+  </footer>
+</div>
+</body>
+</html>
