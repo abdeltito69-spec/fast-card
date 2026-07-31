@@ -126,6 +126,12 @@
     cursor:pointer; background:#fff; color:var(--ink); transition:all .15s ease;
   }
   .choice-chip.active{ background:var(--blue); border-color:var(--blue); color:#fff; }
+  .crypto-help-link{
+    display:inline-flex; align-items:center; gap:6px; margin-top:10px;
+    background:var(--blue-soft); color:var(--blue); font-size:13px; font-weight:600;
+    padding:9px 14px; border-radius:9px; text-decoration:none; transition:background .15s ease;
+  }
+  .crypto-help-link:hover{ background:#dde8fd; }
   .promo-row{ display:flex; gap:8px; }
   .promo-row input{
     flex:1; padding:11px 12px; border-radius:10px; border:1px solid var(--border); font-size:13px;
@@ -337,6 +343,7 @@
           <div class="field">
             <label>Payer avec</label>
             <div class="choice-row" id="crypto-choices"></div>
+            <a href="guide-crypto.html" class="crypto-help-link">🪙 Comment acheter ma crypto ?</a>
           </div>
           <div class="field">
             <label>Code promo</label>
