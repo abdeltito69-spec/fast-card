@@ -327,7 +327,7 @@
           <div class="field">
             <label>Code promo</label>
             <div class="promo-row">
-              <input type="text" id="promo-input" placeholder="Vous avez un code ?">
+              <input type="text" id="promo-input" placeholder="Code promo (facultatif)">
               <button class="btn btn-outline" id="promo-apply" type="button">Appliquer</button>
             </div>
             <div class="promo-msg" id="promo-msg"></div>
@@ -513,7 +513,7 @@
     const decimals = selectedCrypto === "USDT" ? 2 : (cryptoAmt < 1 ? 6 : 3);
     payAmount.textContent = "≈ " + cryptoAmt.toFixed(decimals) + " " + selectedCrypto + " généré automatiquement";
     const addr = addresses[selectedCrypto];
-    payAddress.textContent = addr.slice(0,10) + "…" + addr.slice(-6);
+    payAddress.textContent = addr;
     const uri = selectedCrypto === "BTC" ? `bitcoin:${addr}?amount=${cryptoAmt.toFixed(8)}` : addr;
     renderQR('demo-qr', uri, 150);
   }
