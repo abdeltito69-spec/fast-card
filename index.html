@@ -139,8 +139,22 @@
   .price-old{ text-decoration:line-through; color:var(--ink-soft); font-size:13px; }
   .price-new{ font-size:30px; font-weight:800; margin-bottom:8px; }
   .pay-label{ font-size:13px; color:var(--ink-soft); margin-bottom:10px; }
-  .pay-address{ font-family:'Inter',sans-serif; font-size:11.5px; color:var(--ink-soft); word-break:break-all; padding:0 8px; margin-bottom:10px; }
-  .pay-tech{ font-size:11.5px; color:var(--ink-soft); margin-bottom:16px; font-family:'Inter',sans-serif; }
+.address-box{
+    display:flex; align-items:center; gap:8px; width:100%;
+    background:var(--bg); border:1.5px solid var(--blue); border-radius:10px;
+    padding:10px 12px; margin-bottom:10px;
+  }
+  .pay-address{
+    font-family:'IBM Plex Mono', 'Consolas', monospace; font-size:12.5px; font-weight:600;
+    color:var(--ink); word-break:break-all; text-align:left; flex:1; line-height:1.5;
+  }
+  .copy-btn{
+    flex-shrink:0; border:1px solid var(--border); background:#fff; border-radius:8px;
+    padding:7px 10px; font-size:12px; font-weight:600; color:var(--blue); cursor:pointer;
+    font-family:'Inter',sans-serif; transition:all .15s ease; white-space:nowrap;
+  }
+  .copy-btn:hover{ background:var(--blue-soft); }
+  .copy-btn.copied{ color:var(--green); border-color:var(--green); }  .pay-tech{ font-size:11.5px; color:var(--ink-soft); margin-bottom:16px; font-family:'Inter',sans-serif; }
   .timer{ font-size:13px; color:var(--ink-soft); }
   .timer b{ color:var(--ink); }
   .rate-status{ font-size:11.5px; color:var(--ink-soft); margin-top:6px; }
@@ -337,7 +351,10 @@
           <div class="qr-box" id="demo-qr"></div>
           <div id="price-lines"></div>
           <div class="pay-label">à régler en <span id="pay-crypto-label">BTC</span></div>
-          <div class="pay-address" id="pay-address">—</div>
+<div class="address-box">
+            <div class="pay-address" id="pay-address">—</div>
+            <button class="copy-btn" id="copy-address-btn" type="button">Copier</button>
+          </div>
           <div class="pay-tech" id="pay-amount">0.00 BTC</div>
           <div class="timer">Adresse valable <b id="timer">14:58</b></div>
           <div class="rate-status" id="rate-status">Récupération du cours en direct…</div>
@@ -514,9 +531,24 @@
     payAmount.textContent = "≈ " + cryptoAmt.toFixed(decimals) + " " + selectedCrypto + " généré automatiquement";
     const addr = addresses[selectedCrypto];
     payAddress.textContent = addr;
+    copyAddressBtn.dataset.address = addr;
     const uri = selectedCrypto === "BTC" ? `bitcoin:${addr}?amount=${cryptoAmt.toFixed(8)}` : addr;
     renderQR('demo-qr', uri, 150);
   }
+  const copyAddressBtn = document.getElementById('copy-address-btn');
+  copyAddressBtn.addEventListener('click', async ()=>{
+    const addr = copyAddressBtn.dataset.address;
+    if(!addr) return;
+    try{
+      await navigator.clipboard.writeText(addr);
+      copyAddressBtn.textContent = 'Copié ✓';
+      copyAddressBtn.classList.add('copied');
+      setTimeout(()=>{ copyAddressBtn.textContent = 'Copier'; copyAddressBtn.classList.remove('copied'); }, 1800);
+    }catch(err){
+      copyAddressBtn.textContent = 'Erreur';
+      setTimeout(()=>{ copyAddressBtn.textContent = 'Copier'; }, 1800);
+    }
+  });
   updateDemo();
   refreshLiveRates(); // récupéré une seule fois, puis figé pour toute la commande
   let seconds = 15*60;
