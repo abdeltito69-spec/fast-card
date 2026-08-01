@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FastCard — Cartes cadeaux payées en crypto, simplement</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#FAFAF7;
@@ -109,63 +108,6 @@
   .brand-range{ font-size:12px; color:var(--ink-soft); }
   @media (max-width:760px){ .brand-grid{ grid-template-columns:repeat(2,1fr); } }
 
-  /* CHECKOUT */
-  .checkout{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
-  .checkout-grid{ display:grid; grid-template-columns:1fr 1fr; }
-  .checkout-left{ padding:32px; border-right:1px solid var(--border); }
-  .checkout-right{ padding:32px; background:var(--bg); display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:center; }
-  .field{ margin-bottom:20px; text-align:left; }
-  .field label{ display:block; font-size:13px; font-weight:600; margin-bottom:8px; color:var(--ink); }
-  select{
-    width:100%; padding:11px 12px; border-radius:10px; border:1px solid var(--border);
-    font-family:'Inter', sans-serif; font-size:14px; background:#fff; color:var(--ink);
-  }
-  .choice-row{ display:flex; gap:8px; flex-wrap:wrap; }
-  .choice-chip{
-    border:1px solid var(--border); border-radius:9px; padding:10px 16px; font-size:14px; font-weight:600;
-    cursor:pointer; background:#fff; color:var(--ink); transition:all .15s ease;
-  }
-  .choice-chip.active{ background:var(--blue); border-color:var(--blue); color:#fff; }
-  .crypto-help-link{
-    display:inline-flex; align-items:center; gap:6px; margin-top:10px;
-    background:var(--blue-soft); color:var(--blue); font-size:13px; font-weight:600;
-    padding:9px 14px; border-radius:9px; text-decoration:none; transition:background .15s ease;
-  }
-  .crypto-help-link:hover{ background:#dde8fd; }
-  .promo-row{ display:flex; gap:8px; }
-  .promo-row input{
-    flex:1; padding:11px 12px; border-radius:10px; border:1px solid var(--border); font-size:13px;
-    text-transform:uppercase; letter-spacing:0.03em; font-family:'Inter', sans-serif;
-  }
-  .promo-msg{ font-size:12.5px; margin-top:8px; min-height:16px; }
-  .promo-msg.ok{ color:var(--green); font-weight:600; }
-  .promo-msg.err{ color:#C23434; }
-
-  .qr-box{ background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px; margin-bottom:18px; width:160px; height:160px; display:flex; align-items:center; justify-content:center; }
-  .price-old{ text-decoration:line-through; color:var(--ink-soft); font-size:13px; }
-  .price-new{ font-size:30px; font-weight:800; margin-bottom:8px; }
-  .pay-label{ font-size:13px; color:var(--ink-soft); margin-bottom:10px; }
-.address-box{
-    display:flex; align-items:center; gap:8px; width:100%;
-    background:var(--bg); border:1.5px solid var(--blue); border-radius:10px;
-    padding:10px 12px; margin-bottom:10px;
-  }
-  .pay-address{
-    font-family:'IBM Plex Mono', 'Consolas', monospace; font-size:12.5px; font-weight:600;
-    color:var(--ink); word-break:break-all; text-align:left; flex:1; line-height:1.5;
-  }
-  .copy-btn{
-    flex-shrink:0; border:1px solid var(--border); background:#fff; border-radius:8px;
-    padding:7px 10px; font-size:12px; font-weight:600; color:var(--blue); cursor:pointer;
-    font-family:'Inter',sans-serif; transition:all .15s ease; white-space:nowrap;
-  }
-  .copy-btn:hover{ background:var(--blue-soft); }
-  .copy-btn.copied{ color:var(--green); border-color:var(--green); }  .pay-tech{ font-size:11.5px; color:var(--ink-soft); margin-bottom:16px; font-family:'Inter',sans-serif; }
-  .timer{ font-size:13px; color:var(--ink-soft); }
-  .timer b{ color:var(--ink); }
-  .rate-status{ font-size:11.5px; color:var(--ink-soft); margin-top:6px; }
-  @media (max-width:760px){ .checkout-grid{ grid-template-columns:1fr; } .checkout-left{ border-right:none; border-bottom:1px solid var(--border); } }
-
   /* FAQ */
   .faq-item{ background:var(--surface); border:1px solid var(--border); border-radius:12px; margin-bottom:10px; overflow:hidden; }
   .faq-q{ padding:18px 20px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:600; font-size:15px; }
@@ -227,7 +169,7 @@
       <a href="#cartes">Cartes cadeaux</a>
       <a href="#faq">Questions</a>
     </div>
-    <a href="#acheter" class="btn btn-primary">Commander</a>
+    <a href="commande.html" class="btn btn-primary">Commander</a>
   </div>
 </nav>
 
@@ -236,7 +178,7 @@
     <h1>Achetez vos cartes cadeaux <em>en toute simplicité</em>, payées en crypto</h1>
     <p>Amazon, Steam, Google Play et bien d'autres. Payez en Bitcoin, Ethereum ou USDT et recevez votre code par email en quelques minutes.</p>
     <div class="hero-actions">
-      <a href="#acheter" class="btn btn-primary">Choisir ma carte cadeau</a>
+      <a href="commande.html" class="btn btn-primary">Choisir ma carte cadeau</a>
       <a href="#comment" class="btn btn-outline">Voir comment ça marche</a>
     </div>
     <div class="trust-row">
@@ -316,61 +258,6 @@
   </div>
 </section>
 
-<section id="acheter">
-  <div class="wrap">
-    <h2 class="section-title">Composer ma commande</h2>
-    <p class="section-sub">Choisissez, payez, recevez — tout se passe ici.</p>
-    <div class="checkout">
-      <div class="checkout-grid">
-        <div class="checkout-left">
-          <div class="field">
-            <label>Marque</label>
-            <select id="sel-brand">
-              <option>Amazon</option>
-              <option>Google Play</option>
-              <option>Steam</option>
-              <option>Netflix</option>
-              <option>PlayStation</option>
-              <option>Uber</option>
-              <option>Spotify</option>
-              <option>Airbnb</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Montant</label>
-            <div class="choice-row" id="denom-choices"></div>
-          </div>
-          <div class="field">
-            <label>Payer avec</label>
-            <div class="choice-row" id="crypto-choices"></div>
-            <a href="guide-crypto.html" class="crypto-help-link">🪙 Comment acheter ma crypto ?</a>
-          </div>
-          <div class="field">
-            <label>Code promo</label>
-            <div class="promo-row">
-              <input type="text" id="promo-input" placeholder="Code promo (facultatif)">
-              <button class="btn btn-outline" id="promo-apply" type="button">Appliquer</button>
-            </div>
-            <div class="promo-msg" id="promo-msg"></div>
-          </div>
-        </div>
-        <div class="checkout-right">
-          <div class="qr-box" id="demo-qr"></div>
-          <div id="price-lines"></div>
-          <div class="pay-label">à régler en <span id="pay-crypto-label">BTC</span></div>
-<div class="address-box">
-            <div class="pay-address" id="pay-address">—</div>
-            <button class="copy-btn" id="copy-address-btn" type="button">Copier</button>
-          </div>
-          <div class="pay-tech" id="pay-amount">0.00 BTC</div>
-          <div class="timer">Adresse valable <b id="timer">14:58</b></div>
-          <div class="rate-status" id="rate-status">Récupération du cours en direct…</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="faq">
   <div class="wrap" style="max-width:760px;">
     <h2 class="section-title">Questions fréquentes</h2>
@@ -421,151 +308,10 @@
     el.className='brand-card';
     el.innerHTML = `<div class="brand-name">${name}</div><div class="brand-range">200 € · 500 € · 1000 €</div>`;
     el.addEventListener('click', ()=>{
-      const sel = document.getElementById('sel-brand');
-      if([...sel.options].map(o=>o.value).includes(name)) sel.value = name;
-      document.getElementById('acheter').scrollIntoView({behavior:'smooth'});
+      window.location.href = 'commande.html?brand=' + encodeURIComponent(name);
     });
     grid.appendChild(el);
   });
-
-  // Dénominations
-  const denominations = [200, 500, 1000];
-  let selectedDenom = denominations[0];
-  const denomEl = document.getElementById('denom-choices');
-  denominations.forEach(d=>{
-    const chip = document.createElement('button');
-    chip.type='button';
-    chip.className='choice-chip' + (d===selectedDenom ? ' active':'');
-    chip.textContent = d + ' €';
-    chip.addEventListener('click', ()=>{
-      selectedDenom = d;
-      [...denomEl.children].forEach(c=>c.classList.remove('active'));
-      chip.classList.add('active');
-      updateDemo();
-    });
-    denomEl.appendChild(chip);
-  });
-
-  // Cryptos
-  const cryptos = ["BTC","ETH","USDT"];
-  const priceEUR = {BTC:96420, ETH:4210, USDT:1}; // valeurs de secours si l'API est indisponible
-  const addresses = {
-    BTC: "bc1qlmnrax272nwn2dzpkcnmcahrmafhd5uuaq78pk",
-    ETH: "0xD3486E76d6EE893378B2feA58aF2f72b926C1177",
-    USDT:"0xD3486E76d6EE893378B2feA58aF2f72b926C1177",
-  };
-
-  // Récupère le vrai cours du marché pour que le montant en crypto corresponde
-  // à ce qu'un portefeuille affichera réellement au moment du scan.
-  const rateStatus = document.getElementById('rate-status');
-  async function refreshLiveRates(){
-    try{
-      const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=eur');
-      const data = await res.json();
-      if(data.bitcoin && data.bitcoin.eur) priceEUR.BTC = data.bitcoin.eur;
-      if(data.ethereum && data.ethereum.eur) priceEUR.ETH = data.ethereum.eur;
-      rateStatus.textContent = "Cours figé pour votre commande · récupéré à " + new Date().toLocaleTimeString('fr-FR');
-      rateStatus.style.color = "var(--green)";
-    }catch(err){
-      rateStatus.textContent = "Cours indisponible — valeur de secours utilisée, à titre indicatif";
-      rateStatus.style.color = "#C23434";
-    }
-    updateDemo();
-  }
-  let selectedCrypto = "BTC";
-  const cryptoEl = document.getElementById('crypto-choices');
-  cryptos.forEach(c=>{
-    const chip = document.createElement('button');
-    chip.type='button';
-    chip.className='choice-chip' + (c===selectedCrypto ? ' active':'');
-    chip.textContent = c;
-    chip.addEventListener('click', ()=>{
-      selectedCrypto = c;
-      [...cryptoEl.children].forEach(ch=>ch.classList.remove('active'));
-      chip.classList.add('active');
-      updateDemo();
-    });
-    cryptoEl.appendChild(chip);
-  });
-
-  // Code promo
-  const promoInput = document.getElementById('promo-input');
-  const promoApply = document.getElementById('promo-apply');
-  const promoMsg = document.getElementById('promo-msg');
-  const promos = { "ADMIN50": 0.5 };
-  let activeDiscount = 0;
-  let activeCode = "";
-  promoApply.addEventListener('click', applyPromo);
-  promoInput.addEventListener('keydown', e=>{ if(e.key==='Enter') applyPromo(); });
-  function applyPromo(){
-    const code = promoInput.value.trim().toUpperCase();
-    if(!code) return;
-    if(promos[code]){
-      activeDiscount = promos[code]; activeCode = code;
-      promoMsg.textContent = `Code ${code} appliqué : -${activeDiscount*100}%.`;
-      promoMsg.className = 'promo-msg ok';
-    } else {
-      activeDiscount = 0; activeCode = "";
-      promoMsg.textContent = "Code invalide.";
-      promoMsg.className = 'promo-msg err';
-    }
-    updateDemo();
-  }
-
-  // QR réel
-  function renderQR(id, text, size){
-    const el = document.getElementById(id);
-    if(!el) return;
-    el.innerHTML = '';
-    new QRCode(el, { text, width:size, height:size, colorDark:"#16213A", colorLight:"#FFFFFF", correctLevel: QRCode.CorrectLevel.M });
-  }
-
-  const priceLines = document.getElementById('price-lines');
-  const payAmount = document.getElementById('pay-amount');
-  const payAddress = document.getElementById('pay-address');
-  const payCryptoLabel = document.getElementById('pay-crypto-label');
-
-  function updateDemo(){
-    const finalAmount = selectedDenom * (1 - activeDiscount);
-    if(activeDiscount > 0){
-      priceLines.innerHTML = `<div class="price-old">${selectedDenom} €</div><div class="price-new">${finalAmount.toFixed(2)} €</div>`;
-    } else {
-      priceLines.innerHTML = `<div class="price-new">${finalAmount.toFixed(2)} €</div>`;
-    }
-    payCryptoLabel.textContent = selectedCrypto;
-    const cryptoAmt = finalAmount / priceEUR[selectedCrypto];
-    const decimals = selectedCrypto === "USDT" ? 2 : (cryptoAmt < 1 ? 6 : 3);
-    payAmount.textContent = "≈ " + cryptoAmt.toFixed(decimals) + " " + selectedCrypto + " généré automatiquement";
-    const addr = addresses[selectedCrypto];
-    payAddress.textContent = addr;
-    copyAddressBtn.dataset.address = addr;
-    const uri = selectedCrypto === "BTC" ? `bitcoin:${addr}?amount=${cryptoAmt.toFixed(8)}` : addr;
-    renderQR('demo-qr', uri, 150);
-  }
-  const copyAddressBtn = document.getElementById('copy-address-btn');
-  copyAddressBtn.addEventListener('click', async ()=>{
-    const addr = copyAddressBtn.dataset.address;
-    if(!addr) return;
-    try{
-      await navigator.clipboard.writeText(addr);
-      copyAddressBtn.textContent = 'Copié ✓';
-      copyAddressBtn.classList.add('copied');
-      setTimeout(()=>{ copyAddressBtn.textContent = 'Copier'; copyAddressBtn.classList.remove('copied'); }, 1800);
-    }catch(err){
-      copyAddressBtn.textContent = 'Erreur';
-      setTimeout(()=>{ copyAddressBtn.textContent = 'Copier'; }, 1800);
-    }
-  });
-  updateDemo();
-  refreshLiveRates(); // récupéré une seule fois, puis figé pour toute la commande
-  let seconds = 15*60;
-  const timerEl = document.getElementById('timer');
-  setInterval(()=>{
-    seconds = seconds > 0 ? seconds - 1 : 15*60;
-    const m = String(Math.floor(seconds/60)).padStart(2,'0');
-    const s = String(seconds%60).padStart(2,'0');
-    timerEl.textContent = `${m}:${s}`;
-  }, 1000);
 
   // FAQ
   const faqData = [
