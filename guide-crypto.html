@@ -38,6 +38,12 @@
 
   .note{ font-size:13px; color:var(--ink-soft); margin-bottom:26px; }
 
+  .wait-box{
+    background:#FFF7E8; border:1px solid #F0C36D; border-radius:12px;
+    padding:16px 18px; margin-bottom:22px; font-size:14px; line-height:1.6;
+  }
+  .wait-box strong{ color:#8A5A00; }
+
   .btn{
     display:inline-block; background:var(--blue); color:#fff; font-weight:600; font-size:14px;
     padding:12px 22px; border-radius:10px; text-decoration:none;
@@ -59,14 +65,24 @@
   </div>
 
   <ol>
-    <li><b>Téléchargez l'appli</b> (Trust Wallet ou Exodus) — l'interface est plus simple qu'une plateforme classique, avec un achat intégré directement dans l'appli.</li>
-    <li><b>Cliquez sur "Acheter"</b> dans l'appli, choisissez le montant en euros indiqué sur FastCard, payez par carte bancaire.</li>
-    <li><b>Envoyez-le</b> vers l'adresse FastCard affichée (bouton "Envoyer", copier-coller ou scan du QR code).</li>
+    <li><b>Téléchargez l'appli</b> (Trust Wallet ou Exodus) et créez votre portefeuille — juste un code/mot de passe, aucune vérification à cette étape.</li>
+    <li><b>Cliquez sur "Acheter"</b> dans l'appli.</li>
+    <li><b>Vérifiez votre identité</b> (carte d'identité, parfois selfie) — obligatoire une seule fois, quelle que soit l'appli.</li>
+    <li><b>Choisissez le montant en euros</b> indiqué sur FastCard et payez par carte bancaire.</li>
   </ol>
 
-  <p class="note">Une vérification d'identité (carte d'identité, parfois selfie) reste généralement demandée lors du premier achat, quelle que soit l'appli choisie — c'est une obligation légale, pas une spécificité de FastCard.</p>
+  <div class="wait-box">
+    ⏳ <strong>Petite pause normale :</strong> après avoir payé, il faut patienter <strong>5 à 10 minutes</strong> avant que la crypto arrive vraiment dans votre appli. C'est comme quand vous commandez quelque chose en ligne : le paiement est validé tout de suite, mais le colis met un peu de temps à arriver. Ce n'est pas un bug, ne recommencez pas l'achat — attendez juste un peu.
+  </div>
 
-  <a class="btn" href="index.html#acheter">Retour à ma commande →</a>
+  <ol start="5">
+    <li><b>Sur FastCard</b>, cliquez sur "Copier" à côté de l'adresse affichée (ou gardez le QR code sous les yeux).</li>
+    <li><b>Dans l'appli</b>, cliquez sur "Envoyer", collez l'adresse copiée (ou scannez le QR), puis confirmez l'envoi.</li>
+  </ol>
+
+  <p class="note">Une fois l'envoi confirmé, revenez sur FastCard : votre code cadeau s'affiche dès que le paiement est validé.</p>
+
+  <a class="btn" href="commande.html">Retour à ma commande →</a>
 </div>
 </body>
 </html>
