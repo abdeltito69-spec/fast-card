@@ -176,7 +176,7 @@
 <section class="hero">
   <div class="wrap">
     <h1>Achetez vos cartes cadeaux <em>en toute simplicité</em></h1>
-    <p>Amazon, Steam, Google Play et bien d'autres. Payez simplement, sans compte bancaire, et recevez votre code par email en quelques minutes.</p>
+    <p>Amazon, Sephora, Zara, Fnac et bien d'autres. Payez simplement, sans compte bancaire, et recevez votre code par email en quelques minutes.</p>
     <div class="hero-actions">
       <a href="commande.html" class="btn btn-primary">Choisir ma carte cadeau</a>
       <a href="#comment" class="btn btn-outline">Voir comment ça marche</a>
@@ -301,7 +301,7 @@
 
 <script>
   // Catalogue
-  const brands = ["Amazon","Google Play","Steam","Netflix","PlayStation","Uber","Spotify","Airbnb"];
+  const brands = ["Amazon","Sephora","Zara","Fnac","Netflix","Apple","PlayStation","Google Play"];
   const grid = document.getElementById('brand-grid');
   brands.forEach(name=>{
     const el = document.createElement('div');
@@ -344,7 +344,7 @@
   const chatInput = document.getElementById('chat-input');
   const chatSend = document.getElementById('chat-send');
 
-  const SYSTEM_PROMPT = `Tu es l'assistant de support client de FastCard, un site qui vend des cartes cadeaux (Amazon, Google Play, Steam, Netflix, PlayStation, Uber, Spotify, Airbnb) payables en Bitcoin (BTC), Ethereum (ETH) ou USDT (réseau ERC-20).
+  const SYSTEM_PROMPT = `Tu es l'assistant de support client de FastCard, un site qui vend des cartes cadeaux (Amazon, Sephora, Zara, Fnac, Netflix, Apple, PlayStation, Google Play) payables en Bitcoin (BTC), Ethereum (ETH) ou USDT (réseau ERC-20).
 Règles :
 - Dénominations disponibles : uniquement 200 €, 500 € et 1000 €, identiques pour toutes les marques.
 - Fonctionnement : le client choisit la carte et le montant, paie en crypto vers une adresse dédiée affichée avec un QR code, et reçoit son code cadeau dès la confirmation du paiement sur la blockchain.
