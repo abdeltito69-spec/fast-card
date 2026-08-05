@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FastCard — Cartes cadeaux payées en crypto, simplement</title>
+<title>FastCard — Cartes cadeaux en ligne, simplement</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -175,8 +175,8 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>Achetez vos cartes cadeaux <em>en toute simplicité</em>, payées en crypto</h1>
-    <p>Amazon, Steam, Google Play et bien d'autres. Payez en Bitcoin, Ethereum ou USDT et recevez votre code par email en quelques minutes.</p>
+    <h1>Achetez vos cartes cadeaux <em>en toute simplicité</em></h1>
+    <p>Amazon, Steam, Google Play et bien d'autres. Payez simplement, sans compte bancaire, et recevez votre code par email en quelques minutes.</p>
     <div class="hero-actions">
       <a href="commande.html" class="btn btn-primary">Choisir ma carte cadeau</a>
       <a href="#comment" class="btn btn-outline">Voir comment ça marche</a>
@@ -201,13 +201,13 @@
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Payez en crypto</h3>
-        <p>Vous recevez une adresse et un QR code. Le montant exact en Bitcoin, Ethereum ou USDT vous est indiqué avant de payer.</p>
+        <h3>Réglez votre commande</h3>
+        <p>Vous recevez une adresse de paiement dédiée. Le montant exact vous est indiqué avant de valider.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <h3>Recevez votre code</h3>
-        <p>Dès que le paiement est confirmé sur la blockchain, votre code cadeau s'affiche à l'écran et vous est envoyé par email.</p>
+        <p>Dès que le paiement est confirmé, votre code cadeau s'affiche à l'écran et vous est envoyé par email.</p>
       </div>
     </div>
   </div>
@@ -216,20 +216,20 @@
 <section class="trust-section" id="confiance">
   <div class="wrap">
     <h2 class="section-title">Pourquoi nous faire confiance</h2>
-    <p class="section-sub">On sait qu'un paiement en crypto peut inquiéter la première fois. Voici comment on vous protège.</p>
+    <p class="section-sub">On sait qu'un paiement en ligne peut inquiéter la première fois. Voici comment on vous protège.</p>
     <div class="trust-grid">
       <div class="trust-card">
         <div class="icon">⛓</div>
         <div>
-          <h3>Paiement vérifié sur la blockchain</h3>
-          <p>Chaque transaction est suivie en direct. Vous voyez le nombre de confirmations en temps réel, sans rien avoir à faire.</p>
+          <h3>Paiement vérifié en temps réel</h3>
+          <p>Chaque transaction est suivie en direct. Vous voyez la confirmation apparaître, sans rien avoir à faire.</p>
         </div>
       </div>
       <div class="trust-card">
         <div class="icon">🔒</div>
         <div>
           <h3>Aucune information bancaire</h3>
-          <p>On ne vous demande jamais de numéro de carte ni d'accès à votre compte. Seule une adresse crypto est utilisée.</p>
+          <p>On ne vous demande jamais de numéro de carte ni d'accès à votre compte. Seule une adresse de paiement dédiée est utilisée.</p>
         </div>
       </div>
       <div class="trust-card">
@@ -315,10 +315,10 @@
 
   // FAQ
   const faqData = [
-    {q:"Est-ce que le paiement en crypto est sécurisé ?", a:"Oui. Vous payez directement depuis votre propre portefeuille vers une adresse dédiée. Aucune information personnelle ou bancaire ne transite par nos serveurs."},
-    {q:"Combien de temps pour recevoir ma carte cadeau ?", a:"En général quelques minutes après la première confirmation sur la blockchain. Le délai dépend du réseau utilisé (Bitcoin ou Ethereum)."},
+    {q:"Est-ce que le paiement est sécurisé ?", a:"Oui. Vous payez directement depuis votre propre portefeuille numérique vers une adresse dédiée. Aucune information personnelle ou bancaire ne transite par nos serveurs."},
+    {q:"Combien de temps pour recevoir ma carte cadeau ?", a:"En général quelques minutes après la première confirmation du paiement. Le délai dépend du mode de règlement choisi."},
     {q:"Que se passe-t-il si j'envoie le mauvais montant ?", a:"Contactez-nous à fastcardmessage@gmail.com avec votre identifiant de commande : un montant incorrect est traité manuellement et régularisé rapidement."},
-    {q:"Puis-je me faire rembourser ?", a:"Tant que le code cadeau n'a pas été révélé, un remboursement en crypto est possible. Une fois le code affiché, la commande est considérée comme livrée."},
+    {q:"Puis-je me faire rembourser ?", a:"Tant que le code cadeau n'a pas été révélé, un remboursement est possible. Une fois le code affiché, la commande est considérée comme livrée."},
     {q:"Puis-je utiliser un code promo ?", a:"Oui. Ces codes sont proposés lors d'opérations ponctuelles (lancement, parrainage, campagnes partenaires) pour faire connaître FastCard : si vous en avez un, saisissez-le dans le champ prévu lors de la commande et la réduction s'applique automatiquement au paiement."},
   ];
   const faqList = document.getElementById('faq-list');
@@ -363,7 +363,7 @@ Règles :
     chatOpen = !chatOpen;
     chatPanel.classList.toggle('open', chatOpen);
     if(chatOpen && chatMessages.children.length === 0){
-      addMessage('bot', "Bonjour ! Je suis l'assistant FastCard. Je peux répondre à vos questions sur les cartes cadeaux, le paiement en crypto ou la sécurité — comment puis-je vous aider ?");
+      addMessage('bot', "Bonjour ! Je suis l'assistant FastCard. Je peux répondre à vos questions sur les cartes cadeaux, le paiement ou la sécurité — comment puis-je vous aider ?");
     }
   }
   chatToggle.addEventListener('click', toggleChat);
