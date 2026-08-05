@@ -131,13 +131,13 @@
           <label>Marque</label>
           <select id="sel-brand">
             <option>Amazon</option>
-            <option>Google Play</option>
-            <option>Steam</option>
+            <option>Sephora</option>
+            <option>Zara</option>
+            <option>Fnac</option>
             <option>Netflix</option>
+            <option>Apple</option>
             <option>PlayStation</option>
-            <option>Uber</option>
-            <option>Spotify</option>
-            <option>Airbnb</option>
+            <option>Google Play</option>
           </select>
         </div>
         <div class="field">
@@ -371,7 +371,7 @@
   const chatInput = document.getElementById('chat-input');
   const chatSend = document.getElementById('chat-send');
 
-  const SYSTEM_PROMPT = `Tu es l'assistant de support client de FastCard, un site qui vend des cartes cadeaux (Amazon, Google Play, Steam, Netflix, PlayStation, Uber, Spotify, Airbnb) payables en Bitcoin (BTC), Ethereum (ETH) ou USDT (réseau ERC-20).
+  const SYSTEM_PROMPT = `Tu es l'assistant de support client de FastCard, un site qui vend des cartes cadeaux (Amazon, Sephora, Zara, Fnac, Netflix, Apple, PlayStation, Google Play) payables en Bitcoin (BTC), Ethereum (ETH) ou USDT (réseau ERC-20).
 Règles :
 - Dénominations disponibles : uniquement 200 €, 500 € et 1000 €, identiques pour toutes les marques.
 - Fonctionnement : le client choisit la carte et le montant, paie en crypto vers une adresse dédiée affichée avec un QR code, et reçoit son code cadeau dès la confirmation du paiement sur la blockchain.
